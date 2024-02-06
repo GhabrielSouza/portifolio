@@ -1,0 +1,310 @@
+@charset "UTF-8";
+.cabeçalho {
+  background: #526D82;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.cabeçalho .links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.cabeçalho .links li {
+  margin-right: 3rem;
+  align-items: center;
+}
+.cabeçalho .links li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+.cabeçalho .links li a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.cabeçalho .links li a:hover::after {
+  width: 100%;
+}
+.cabeçalho .cabeçalho__titulo h1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.cabeçalho .cabeçalho__redeSocial {
+  margin-left: 13rem;
+  display: flex;
+  justify-content: space-around;
+}
+.cabeçalho .cabeçalho__redeSocial .cabeçalho__redeSocial--links a {
+  width: 100px;
+  height: 100px;
+}
+.cabeçalho .cabeçalho__redeSocial .fa-brands {
+  padding-left: 1rem;
+  font-size: 30px;
+}
+.cabeçalho .cabeçalho__redeSocial .fa-instagram:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s all;
+}
+.cabeçalho .cabeçalho__redeSocial .fa-linkedin:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: linear-gradient(45deg, #0077b5, #caccce, #00a0dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s all;
+}
+.cabeçalho .cabeçalho__redeSocial .fa-whatsapp:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: linear-gradient(45deg, #E5FFCC, #1EBEA5, #00E676, #D0E9EA, #ffffff);
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s all;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  max-width: 100vw;
+  color: white;
+}
+
+.linguagens {
+  background: #526D82;
+  padding: 0rem 0 1rem 0;
+}
+.linguagens .linguagens__imagens {
+  display: flex;
+  justify-content: center;
+  gap: 5.5rem;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  text-align: center;
+}
+.linguagens .linguagens__imagens li h3 {
+  font-weight: 400;
+}
+.linguagens .linguagens__imagens .fa-brands {
+  font-size: 2em;
+}
+.linguagens .linguagens__imagens .fa-html5:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #ec6231;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+.linguagens .linguagens__imagens .fa-sass:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #d46a9c;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+.linguagens .linguagens__imagens .fa-js:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #f3e31b;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+.linguagens .linguagens__imagens .fa-angular:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #cd042f;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.8s linear;
+}
+.linguagens .linguagens__imagens .fa-react:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #64dcfc;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+.linguagens .linguagens__imagens .fa-css3-alt:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #048bcb;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+.linguagens .linguagens__imagens .fa-git-alt:hover {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: #f45333;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+.linguagens .separador {
+  display: block;
+  border-bottom: 2px solid white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.apresentacao {
+  background: #526D82;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.1rem;
+}
+
+.sobreMim {
+  background: #526D82;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  text-align: center;
+  padding: 3rem;
+}
+
+.apresentacao__titulo, .sobreMim__text {
+  width: 50%;
+}
+
+.apresentacao__titulo h2, .sobreMim__text__titulo {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.apresentacao__titulo p, .sobreMim__text__conteudo {
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.apresentacao__titulo button, .sobreMim__text__button {
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background: #27374D;
+  cursor: pointer;
+}
+
+.apresentacao__titulo button:hover, .sobreMim__text__button:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  background: #9DB2BF;
+  transition: 0.5s all;
+}
+
+.apresentacao__titulo button:active, .sobreMim__text__button:active {
+  background: #27374D;
+  transition: none;
+}
+
+.apresentacao__imagem, .sobreMim__imagem {
+  width: 30%;
+}
+
+.sobreMim__imagem img {
+  display: block;
+  animation: moverParaLado 4s infinite;
+}
+
+.apresentacao__imagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: moverParaCima 4s infinite;
+}
+
+@keyframes moverParaCima {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+@keyframes moverParaLado {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+}
+.footer {
+  background: #27374D;
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem;
+}
+.footer .footer__redes-sociais a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.copyright p {
+  background: #27374D;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.formacao {
+  background: #526D82;
+  padding: 3rem;
+}
+.formacao h2 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.formacao .formacao__conteiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  gap: 25px;
+}
+.formacao .formacao__conteiner .formacao__universidade, .formacao .formacao__conteiner .formacao__curso {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+.formacao .formacao__conteiner .formacao__curso {
+  width: 50%;
+  height: 100%;
+}/*# sourceMappingURL=styles.css.map */

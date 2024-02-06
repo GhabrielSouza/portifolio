@@ -1,0 +1,105 @@
+@use '../abstract/variaveis';
+
+
+.cabeçalho{
+    background:variaveis.$color-backgroud;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .links{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        & li{
+            margin-right: 3rem;
+            align-items: center;
+        }
+
+        & li a{
+            text-decoration: none;
+            color: variaveis.$color-fonts;
+            position: relative;
+        }
+
+        & li a::after{
+            content: " ";
+            width: 0%;
+            height: 2px;
+            background: variaveis.$color-fonts;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .5s ease-in-out;
+        }
+
+        & li a:hover::after{
+            width: 100%;
+        }
+    }
+
+    .cabeçalho__titulo h1 a{
+        text-decoration: none;
+        color: variaveis.$color-fonts;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .cabeçalho__redeSocial{
+        margin-left: 13rem;
+        display: flex;
+        justify-content: space-around;
+        
+        .cabeçalho__redeSocial--links a{
+            width: 100px;
+            height: 100px;   
+        }
+
+        .fa-brands{
+            padding-left: 1rem;
+            font-size: 30px;
+        }
+
+        .fa-instagram:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            background-clip: text;
+            transition: .5s all;
+        }
+       
+        .fa-linkedin:hover{
+            width: 100%;
+            height: 100%;  
+            color: transparent;
+            background: linear-gradient(45deg, #0077b5,  #caccce, #00a0dc);
+            background-clip: text;
+            transition: .5s all;
+        }
+
+        .fa-whatsapp:hover{
+            width: 100%;
+            height: 100%; 
+            color: transparent;
+            background: linear-gradient(45deg, #E5FFCC, #1EBEA5, #00E676, #D0E9EA, #ffffff);
+            background-clip: text;
+            transition: .5s all;
+        }
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+

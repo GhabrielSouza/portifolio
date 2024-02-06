@@ -1,0 +1,35 @@
+@use "./variaveis";
+
+.formacao{
+    background:variaveis.$color-backgroud;
+    padding: 3rem;
+    & h2{
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+    .formacao__conteiner{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        
+        gap: 25px;
+
+        .formacao__universidade, .formacao__curso{
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            padding: .5rem;
+            .formacao__universidade--conteudo{
+    
+            }
+        }
+
+        .formacao__curso{
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+}

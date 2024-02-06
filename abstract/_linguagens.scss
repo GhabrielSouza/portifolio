@@ -1,0 +1,100 @@
+@use './variaveis';
+
+.linguagens{
+    background:variaveis.$color-backgroud;
+    padding: 0rem 0 1rem 0;
+   
+
+    .linguagens__imagens{
+        display: flex;
+        justify-content: center;
+        gap: 5.5rem;
+        align-items: center;
+        flex-direction: row;
+        list-style: none;
+        text-align: center;
+
+        li h3{
+            font-weight: 400;
+        }
+
+        .fa-brands{
+            font-size: 2em;
+        }
+
+        .fa-html5:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background: #ec6231;
+            background-clip: text;
+            transition: .5s linear;
+        }
+
+        .fa-sass:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background: #d46a9c;
+            background-clip: text; 
+            transition: .5s linear;
+            
+        }
+
+        .fa-js:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background: #f3e31b;
+            background-clip: text; 
+            transition: .5s linear;
+            
+        }
+
+        .fa-angular:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background:#cd042f;
+            background-clip: text; 
+            transition: .8s linear;
+                    }
+
+        .fa-react:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background:#64dcfc;
+            background-clip: text; 
+            transition: .5s linear;
+            
+        } 
+        
+        .fa-css3-alt:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background:#048bcb;
+            background-clip: text; 
+            transition: .5s linear;
+            
+        }
+
+        .fa-git-alt:hover{
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            background:#f45333;
+            background-clip: text; 
+            transition: .5s linear;
+            
+        }
+    }
+    .separador{
+        display: block;
+        border-bottom: 2px solid variaveis.$color-fonts;
+        width: 50%;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+}

@@ -1,0 +1,19 @@
+@use './variaveis';
+
+.footer{
+    background: #27374D;
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+
+    .footer__redes-sociais a{
+        display: block;
+        text-align: center;
+        text-decoration:none;
+    } 
+}
+.copyright p{
+    background: #27374D;
+     text-align: center;
+     padding-bottom: 1rem ;
+}

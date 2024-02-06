@@ -1,0 +1,91 @@
+@use './variaveis';
+@use './linguagens';
+
+.apresentacao{
+    background:variaveis.$color-backgroud;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.1rem;
+}
+
+.sobreMim{
+    background:variaveis.$color-backgroud;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    text-align: center;
+    padding: 3rem;
+    
+}
+
+.apresentacao__titulo, .sobreMim__text{
+    width: 50%;
+}
+
+.apresentacao__titulo h2, .sobreMim__text__titulo{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.apresentacao__titulo p, .sobreMim__text__conteudo{
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding-bottom: 1rem ;
+}
+
+.apresentacao__titulo button, .sobreMim__text__button{
+    padding: 1rem;
+    border-radius: 20px;    
+    border: none;
+    color: variaveis.$color-font-buttons;
+    background: variaveis.$color-buttons;
+    cursor: pointer;
+}
+
+.apresentacao__titulo button:hover, .sobreMim__text__button:hover{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    background: variaveis.$color-buttons-hover;
+    transition: .5s all;
+}
+
+.apresentacao__titulo button:active, .sobreMim__text__button:active{
+    background: variaveis.$color-buttons;
+    transition: none;
+}
+
+.apresentacao__imagem, .sobreMim__imagem{
+    width: 30%;
+}
+
+.sobreMim__imagem img{
+    display: block;
+    animation: moverParaLado 4s infinite;
+}
+
+.apresentacao__imagem img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: moverParaCima 4s infinite;
+}
+
+@keyframes moverParaCima {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes moverParaLado{
+    0%, 100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(100px);
+    }
+}
+
