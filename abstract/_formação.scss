@@ -1,6 +1,6 @@
 @use "./variaveis";
 
-.formacao{
+.formacao{  
     background:variaveis.$color-backgroud;
     padding: 3rem;
     & h2{
@@ -11,24 +11,24 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        align-items: center;
-        
-        gap: 25px;
+        margin: 0 auto;
+        width: 50%;
+        height: 100%;
+        gap: 15px;
 
-        .formacao__universidade, .formacao__curso{
+        .formacao__universidade{
+            grid-column: span 2;
             border: 1px solid white;
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
+            border-radius: 5px;
             padding: .5rem;
-            .formacao__universidade--conteudo{
-    
-            }
+            
         }
 
         .formacao__curso{
-            width: 50%;
+            border: 1px solid white;
+            border-radius: 5px;
             height: 100%;
+            padding: .5rem;
         }
     }
 

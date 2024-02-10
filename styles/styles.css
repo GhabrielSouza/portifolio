@@ -294,17 +294,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  align-items: center;
-  gap: 25px;
-}
-.formacao .formacao__conteiner .formacao__universidade, .formacao .formacao__conteiner .formacao__curso {
-  border: 1px solid white;
-  border-radius: 10px;
-  width: 100%;
+  margin: 0 auto;
+  width: 50%;
   height: 100%;
+  gap: 15px;
+}
+.formacao .formacao__conteiner .formacao__universidade {
+  grid-column: span 2;
+  border: 1px solid white;
+  border-radius: 5px;
   padding: 0.5rem;
 }
 .formacao .formacao__conteiner .formacao__curso {
-  width: 50%;
+  border: 1px solid white;
+  border-radius: 5px;
   height: 100%;
+  padding: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
