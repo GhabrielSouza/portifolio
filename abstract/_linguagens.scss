@@ -22,13 +22,72 @@
             font-size: 2em;
         }
 
+        /*ICONE HTML*/
+
+        .fa-html5{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-html5::after{
+            content: "HTML";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-html5:hover::after{
+            opacity: 0.9;
+        }
+
         .fa-html5:hover{
             width: 100%;
             height: 100%;
             color: transparent;
             background: #ec6231;
             background-clip: text;
-            transition: .5s linear;
+            transition: .3s linear;
+            
+        }
+        
+        /*ICONE SASS*/
+
+        .fa-sass{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-sass::after{
+            content: "Sass";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-sass:hover::after{
+            opacity: 0.9;
         }
 
         .fa-sass:hover{
@@ -37,8 +96,37 @@
             color: transparent;
             background: #d46a9c;
             background-clip: text; 
-            transition: .5s linear;
+            transition: .3s linear;
             
+        }
+
+        /*ICONE JS*/
+
+        .fa-js{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-js::after{
+            content: "JavaScript";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-js:hover:after{
+            opacity: 0.9;
         }
 
         .fa-js:hover{
@@ -47,8 +135,37 @@
             color: transparent;
             background: #f3e31b;
             background-clip: text; 
-            transition: .5s linear;
+            transition: .3s linear;
             
+        }
+
+        /*ICONE ANGULAR*/
+
+        .fa-angular{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-angular::after{
+            content: "Angular";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-angular:hover::after{
+            opacity: 0.9;
         }
 
         .fa-angular:hover{
@@ -57,8 +174,37 @@
             color: transparent;
             background:#cd042f;
             background-clip: text; 
-            transition: .8s linear;
-                    }
+            transition: .3s linear;
+        }
+
+        /*ICONE REACT*/
+
+        .fa-react{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-react::after{
+            content: "React";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-react:hover::after{
+            opacity: 0.9;
+        }
 
         .fa-react:hover{
             width: 100%;
@@ -66,18 +212,77 @@
             color: transparent;
             background:#64dcfc;
             background-clip: text; 
-            transition: .5s linear;
+            transition: .3s linear;
             
         } 
         
+
+        /*ICONE CSS*/
+
+        .fa-css3-alt{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-css3-alt::after{
+            content: "CSS";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-css3-alt:hover::after{
+            opacity: 0.9;
+        }
+
         .fa-css3-alt:hover{
             width: 100%;
             height: 100%;
             color: transparent;
             background:#048bcb;
             background-clip: text; 
-            transition: .5s linear;
+            transition: .3s linear;
             
+        }
+
+        /*ICONE GIT*/
+
+        .fa-git-alt{
+            position: relative;
+            display: inline-block;
+        }
+
+        .fa-git-alt::after{
+            content: "Git";
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-size: .4em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px; /* Ajuste a posição vertical conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.3s;
+        }
+
+        .fa-git-alt:hover::after{
+            opacity: 0.9;
         }
 
         .fa-git-alt:hover{
@@ -86,7 +291,7 @@
             color: transparent;
             background:#f45333;
             background-clip: text; 
-            transition: .5s linear;
+            transition: .3s linear;
             
         }
     }

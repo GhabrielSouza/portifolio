@@ -4,12 +4,29 @@
     background: #27374D;
     display: flex;
     justify-content: space-around;
-    padding: 4rem;
+    padding: 2rem 4rem;
+
+
+    .footer__contato h2{
+        text-align: center;
+        padding-bottom: .2em;
+    }
+
+    .footer__contato p{
+        padding: .3em;
+    }
+
+    .footer__redes-sociais h2{
+        text-align: center;
+        padding-bottom: .2em;
+    }
 
     .footer__redes-sociais a{
         display: block;
+        align-items: center;
         text-align: center;
         text-decoration:none;
+        padding: .3em;
     } 
 }
 .copyright p{

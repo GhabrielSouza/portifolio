@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .cabeçalho .links {
   display: flex;
@@ -101,12 +101,43 @@
   flex-direction: row;
   list-style: none;
   text-align: center;
+  /*ICONE HTML*/
+  /*ICONE SASS*/
+  /*ICONE JS*/
+  /*ICONE ANGULAR*/
+  /*ICONE REACT*/
+  /*ICONE CSS*/
+  /*ICONE GIT*/
 }
 .linguagens .linguagens__imagens li h3 {
   font-weight: 400;
 }
 .linguagens .linguagens__imagens .fa-brands {
   font-size: 2em;
+}
+.linguagens .linguagens__imagens .fa-html5 {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-html5::after {
+  content: "HTML";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-html5:hover::after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-html5:hover {
   width: 100%;
@@ -115,7 +146,31 @@
   background: #ec6231;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
+}
+.linguagens .linguagens__imagens .fa-sass {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-sass::after {
+  content: "Sass";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-sass:hover::after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-sass:hover {
   width: 100%;
@@ -124,7 +179,31 @@
   background: #d46a9c;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
+}
+.linguagens .linguagens__imagens .fa-js {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-js::after {
+  content: "JavaScript";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-js:hover:after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-js:hover {
   width: 100%;
@@ -133,7 +212,31 @@
   background: #f3e31b;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
+}
+.linguagens .linguagens__imagens .fa-angular {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-angular::after {
+  content: "Angular";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-angular:hover::after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-angular:hover {
   width: 100%;
@@ -142,7 +245,31 @@
   background: #cd042f;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.8s linear;
+  transition: 0.3s linear;
+}
+.linguagens .linguagens__imagens .fa-react {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-react::after {
+  content: "React";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-react:hover::after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-react:hover {
   width: 100%;
@@ -151,7 +278,31 @@
   background: #64dcfc;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
+}
+.linguagens .linguagens__imagens .fa-css3-alt {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-css3-alt::after {
+  content: "CSS";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-css3-alt:hover::after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-css3-alt:hover {
   width: 100%;
@@ -160,7 +311,31 @@
   background: #048bcb;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
+}
+.linguagens .linguagens__imagens .fa-git-alt {
+  position: relative;
+  display: inline-block;
+}
+.linguagens .linguagens__imagens .fa-git-alt::after {
+  content: "Git";
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.4em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+.linguagens .linguagens__imagens .fa-git-alt:hover::after {
+  opacity: 0.9;
 }
 .linguagens .linguagens__imagens .fa-git-alt:hover {
   width: 100%;
@@ -169,7 +344,7 @@
   background: #f45333;
   -webkit-background-clip: text;
           background-clip: text;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
 }
 .linguagens .separador {
   display: block;
@@ -268,12 +443,25 @@
   background: #27374D;
   display: flex;
   justify-content: space-around;
-  padding: 4rem;
+  padding: 2rem 4rem;
+}
+.footer .footer__contato h2 {
+  text-align: center;
+  padding-bottom: 0.2em;
+}
+.footer .footer__contato p {
+  padding: 0.3em;
+}
+.footer .footer__redes-sociais h2 {
+  text-align: center;
+  padding-bottom: 0.2em;
 }
 .footer .footer__redes-sociais a {
   display: block;
+  align-items: center;
   text-align: center;
   text-decoration: none;
+  padding: 0.3em;
 }
 
 .copyright p {
@@ -297,17 +485,148 @@
   margin: 0 auto;
   width: 50%;
   height: 100%;
-  gap: 15px;
+  gap: 25px;
 }
 .formacao .formacao__conteiner .formacao__universidade {
   grid-column: span 2;
   border: 1px solid white;
   border-radius: 5px;
   padding: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.formacao .formacao__conteiner .formacao__universidade:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .formacao .formacao__conteiner .formacao__curso {
   border: 1px solid white;
   border-radius: 5px;
   height: 100%;
   padding: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.formacao .formacao__conteiner .formacao__curso:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.projetos {
+  background: #526D82;
+  padding: 3em;
+}
+.projetos .projetos_titulo {
+  font-size: 3rem;
+  padding: 0 0 1em 0;
+}
+.projetos .projetos_items {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5em;
+}
+.projetos .projetos_items .projetos_items__list {
+  width: 80%;
+  margin: 0 auto;
+}
+.projetos .projetos_items .projetos_items__list img {
+  width: 100%;
+  transform: scale(1);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.projetos .projetos_items .projetos_items__list img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.projetos .projetos_items .projetos_items_descricao {
+  margin-left: 9em;
+}
+.projetos .projetos_items .projetos_items_descricao h3 {
+  padding-bottom: 1em;
+}
+.projetos .projetos_items .projetos_items_descricao p {
+  width: 100%;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+.projetos .projetos_items .projetos_items_descricao .projetos_items_descricao--linguagens {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  list-style: none;
+  padding-top: 1.5em;
+}
+.projetos .projetos_items .projetos_items_descricao .projetos_items_descricao--linguagens .fa-brands {
+  font-size: 2em;
+}
+.projetos .projetos_items .projetos_items_descricao .projetos_items_descricao--links {
+  display: flex;
+}
+.projetos .projetos_items .projetos_items_descricao .projetos_items_descricao--links div {
+  padding: 0.5em;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 1em;
+}
+.projetos .projetos_items .projetos_items_descricao .projetos_items_descricao--links div:nth-child(2) {
+  margin-left: 0.5em;
+}
+.projetos .projetos_items--calmaria {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+.projetos .projetos_items--calmaria .projetos_items__list {
+  width: 80%;
+  margin: 0 auto;
+}
+.projetos .projetos_items--calmaria .projetos_items__list img {
+  width: 100%;
+  transform: scale(1);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.projetos .projetos_items--calmaria .projetos_items__list img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao {
+  margin-right: 9em;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao h3 {
+  padding-bottom: 1em;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao p {
+  width: 100%;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao .projetos_items_descricao--linguagens {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  list-style: none;
+  padding-top: 1.5em;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao .projetos_items_descricao--linguagens .fa-brands {
+  font-size: 2em;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao .projetos_items_descricao--links {
+  display: flex;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao .projetos_items_descricao--links div {
+  padding: 0.5em;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 1em;
+}
+.projetos .projetos_items--calmaria .projetos_items_descricao .projetos_items_descricao--links div:nth-child(2) {
+  margin-left: 0.5em;
 }/*# sourceMappingURL=styles.css.map */

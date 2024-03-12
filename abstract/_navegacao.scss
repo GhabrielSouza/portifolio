@@ -2,11 +2,13 @@
 
 
 .cabeçalho{
+    
     background:variaveis.$color-backgroud;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem;
+    
 
     .links{
         display: flex;
