@@ -13,18 +13,21 @@
 </head>
 <body>
     <header class="cabeçalho">
-        <div class="cabeçalho__nav">
-            <nav class="cabeçalho__nav__items">
-                <ul class="links">
-                    <li><a href="#formacao">Formação</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#sobreMim">Sobre</a></li>
-                </ul>
-            </nav>
-        </div>
         <div class="cabeçalho__titulo">
             <h1><a href="/">Ghabriel Souza</a></h1>
         </div>
+        <nav class="cabeçalho__nav__items menu-hamburger">
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <ul class="links" id="navLinks">
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#sobreMim">Sobre</a></li>
+            </ul>
+        </nav>
         <div class="cabeçalho__redeSocial">
             <div class="cabeçalho__redeSocial--link">
                 <a href="https://www.instagram.com/ghabriel_03/" target="_blank"><i class="my-icon fa-brands fa-instagram " ></i></a>
@@ -233,5 +236,6 @@
         </div>
     </footer>      
 </body>
+<script de src="script/MenuHamburguer.js"></script>
 <script src="https://kit.fontawesome.com/9d62f01635.js" crossorigin="anonymous"></script>
 </html>

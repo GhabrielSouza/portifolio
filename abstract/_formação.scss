@@ -1,13 +1,25 @@
 @use "./variaveis";
+@use './breakpointsMedia';
 
-.formacao{  
-    background:variaveis.$color-backgroud;
+.formacao {
+    background: variaveis.$color-backgroud;
     padding: 3rem;
-    & h2{
+
+    @include breakpointsMedia.breakpoint(small) {
+        padding: 3rem 1rem;
+    }
+
+    & h2 {
         font-size: 3rem;
         padding-bottom: 2rem;
+
+        @include breakpointsMedia.breakpoint(small) {
+            text-align: center;
+            font-size: 1.8rem;
+        }
     }
-    .formacao__conteiner{
+
+    .formacao__conteiner {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -16,7 +28,16 @@
         height: 100%;
         gap: 25px;
 
-        .formacao__universidade{
+        @include breakpointsMedia.breakpoint(small) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            width: 80%;
+
+        }
+
+        .formacao__universidade {
             grid-column: span 2;
             border: 1px solid white;
             border-radius: 5px;
@@ -26,13 +47,13 @@
             transition: 0.5s;
         }
 
-        .formacao__universidade:hover{
+        .formacao__universidade:hover {
             transform: scale(1.1);
             transition: 0.5s;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
 
-        .formacao__curso{
+        .formacao__curso {
             border: 1px solid white;
             border-radius: 5px;
             height: 100%;
@@ -42,11 +63,30 @@
             transition: 0.5s;
         }
 
-        .formacao__curso:hover{
+        .formacao__curso:hover {
             transform: scale(1.1);
             transition: 0.5s;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
     }
 
+}
+
+@include breakpointsMedia.breakpoint(small) {
+    .formacao {
+        padding: 3rem 1rem;
+
+        & h2 {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .formacao__conteiner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            width: 80%;
+        }
+    }
 }

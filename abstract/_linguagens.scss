@@ -1,13 +1,17 @@
 @use './variaveis';
 @use './breakpointsMedia';
 
+body{
+    overflow-x: hidden;
+}
+
 .linguagens{
     background:variaveis.$color-backgroud;
     padding: 0rem 0 1rem 0;
-   
     @include breakpointsMedia.breakpoint(small){
-        overflow-x:scroll ;
+        display: none;
     }
+    
 
     .linguagens__imagens{
         display: flex;
@@ -17,6 +21,8 @@
         flex-direction: row;
         list-style: none;
         text-align: center;
+
+        
 
         li h3{
             font-weight: 400;

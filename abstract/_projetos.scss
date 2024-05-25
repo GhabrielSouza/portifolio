@@ -1,142 +1,189 @@
 @use './variaveis';
+@use './breakpointsMedia';
 
-.projetos{
-    background:variaveis.$color-backgroud;
-    padding: 3em ;
+.projetos {
+    background: variaveis.$color-backgroud;
+    padding: 3em;
 
-    .projetos_titulo{
+    .projetos_titulo {
         font-size: 3rem;
         padding: 0 0 1em 0;
     }
 
-    .projetos_items{
+    .projetos_items {
         display: flex;
         justify-content: space-around;
         margin-bottom: 5em;
 
-        .projetos_items__list{
+        .projetos_items__list {
             width: 80%;
             margin: 0 auto;
-           
-            
-            & img{
+
+
+            & img {
                 width: 100%;
                 transform: scale(1);
                 border-radius: 5px;
                 transition: 0.5s;
             }
 
-            & img:hover{
+            & img:hover {
                 transform: scale(1.1);
                 transition: 0.5s;
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             }
+
+
         }
 
-        
 
-        .projetos_items_descricao{
+
+        .projetos_items_descricao {
             margin-left: 9em;
 
-            & h3{
+            & h3 {
                 padding-bottom: 1em;
             }
 
-            & p{
+            & p {
                 width: 100%;
                 letter-spacing: 1px;
                 line-height: 1.4;
             }
-            .projetos_items_descricao--linguagens{
+
+            .projetos_items_descricao--linguagens {
                 display: flex;
                 flex-direction: row;
                 gap: 1em;
                 list-style: none;
                 padding-top: 1.5em;
 
-                .fa-brands{
+                .fa-brands {
                     font-size: 2em;
                 }
             }
 
-            .projetos_items_descricao--links{
+            .projetos_items_descricao--links {
                 display: flex;
-                
-                
-                & div{
+
+
+                & div {
                     padding: .5em;
                     border: 1px solid variaveis.$color-fonts;
                     border-radius: 50%;
                     margin-top: 1em;
                 }
 
-                & div:nth-child(2){
+                & div:nth-child(2) {
+                    margin-left: .5em;
+                }
+            }
+
+        }
+    }
+
+    .projetos_items--calmaria {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+
+        .projetos_items__list {
+            width: 80%;
+            margin: 0 auto;
+
+            & img {
+                width: 100%;
+                transform: scale(1);
+                border-radius: 5px;
+                transition: 0.5s;
+
+              
+            }
+
+            & img:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+        }
+
+        .projetos_items_descricao {
+            margin-right: 9em;
+
+        
+            & h3 {
+                padding-bottom: 1em;
+            }
+
+            & p {
+                width: 100%;
+                letter-spacing: 1px;
+                line-height: 1.4;
+            }
+
+            .projetos_items_descricao--linguagens {
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                list-style: none;
+                padding-top: 1.5em;
+
+                .fa-brands {
+                    font-size: 2em;
+                }
+            }
+
+            .projetos_items_descricao--links {
+                display: flex;
+
+                & div {
+                    padding: .5em;
+                    border: 1px solid variaveis.$color-fonts;
+                    border-radius: 50%;
+                    margin-top: 1em;
+                }
+
+                & div:nth-child(2) {
                     margin-left: .5em;
                 }
             }
         }
     }
-    .projetos_items--calmaria{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row-reverse;
+}
 
-        .projetos_items__list{
-            width: 80%;
-            margin: 0 auto;
+@include breakpointsMedia.breakpoint(small) {
 
-            & img{
-                width: 100%;
-                transform: scale(1);
-                border-radius: 5px;
-                transition: 0.5s;
+    .projetos {
+        .projetos_titulo {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .projetos_items{
+            flex-direction: column;
+            .projetos_items__list {
+                & img {
+                    display: none;
+                }
             }
-
-            & img:hover{
-                transform: scale(1.1);
-                transition: 0.5s;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            
+            .projetos_items_descricao{
+                margin: 0;
             }
         }
 
-        .projetos_items_descricao{
-           margin-right:9em ;
-
-            & h3{
-                padding-bottom: 1em;
-            }
-
-            & p{
-                width: 100%;
-                letter-spacing: 1px;
-                line-height: 1.4;
-            }
-            .projetos_items_descricao--linguagens{
-                display: flex;
-                flex-direction: row;
-                gap: 1em;
-                list-style: none;
-                padding-top: 1.5em;
-
-                .fa-brands{
-                    font-size: 2em;
+        .projetos_items--calmaria {
+            flex-direction: column;
+            .projetos_items__list {
+                & img {
+                    display: none;
                 }
             }
-
-            .projetos_items_descricao--links{
-                display: flex;
-                
-                & div{
-                    padding: .5em;
-                    border: 1px solid variaveis.$color-fonts;
-                    border-radius: 50%;
-                    margin-top: 1em;
-                }
-
-                & div:nth-child(2){
-                    margin-left: .5em;
-                }
+    
+            .projetos_items_descricao {
+                margin: 0;
             }
         }
+
     }
 }

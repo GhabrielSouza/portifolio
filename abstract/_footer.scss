@@ -1,4 +1,5 @@
 @use './variaveis';
+@use './breakpointsMedia';
 
 .footer{
     background: #27374D;
@@ -33,4 +34,15 @@
     background: #27374D;
      text-align: center;
      padding-bottom: 1rem ;
+}
+
+@include breakpointsMedia.breakpoint(small){
+    .footer{
+        flex-direction: column;
+        padding: 2rem 2rem;
+    }
+
+    .footer__redes-sociais{
+        display: none;
+    }
 }

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  overflow-x: hidden;
+}
+
 .cabeçalho {
   background: #526D82;
   display: flex;
@@ -6,9 +10,33 @@
   align-items: center;
   padding: 0 1rem;
 }
+.cabeçalho .mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 767px) {
+  .cabeçalho .mobile-menu {
+    display: block;
+  }
+}
+.cabeçalho .mobile-menu .line {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 6px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.cabeçalho .mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.cabeçalho .mobile-menu.active .line2 {
+  opacity: 0;
+}
+.cabeçalho .mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
 .cabeçalho .links {
   display: flex;
-  justify-content: space-between;
   list-style: none;
 }
 .cabeçalho .links li {
@@ -39,10 +67,20 @@
   font-size: 2rem;
   font-weight: 500;
 }
+@media (max-width: 767px) {
+  .cabeçalho .cabeçalho__titulo h1 a {
+    font-size: 1.5rem;
+  }
+}
 .cabeçalho .cabeçalho__redeSocial {
   margin-left: 13rem;
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .cabeçalho .cabeçalho__redeSocial {
+    display: none;
+  }
 }
 .cabeçalho .cabeçalho__redeSocial .cabeçalho__redeSocial--links a {
   width: 100px;
@@ -80,6 +118,28 @@
   transition: 0.5s all;
 }
 
+@media (max-width: 767px) {
+  .links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 100px);
+    background: #27374D;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+  .links li {
+    margin: 1rem 0;
+  }
+  .links.active {
+    transform: translateX(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -88,13 +148,17 @@
   color: white;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .linguagens {
   background: #526D82;
   padding: 0rem 0 1rem 0;
 }
 @media (max-width: 767px) {
   .linguagens {
-    overflow-x: scroll;
+    display: none;
   }
 }
 .linguagens .linguagens__imagens {
@@ -401,7 +465,7 @@
 }
 @media (max-width: 767px) {
   .apresentacao__titulo h2, .sobreMim__text__titulo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 }
@@ -524,13 +588,33 @@
   padding-bottom: 1rem;
 }
 
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
+  .footer__redes-sociais {
+    display: none;
+  }
+}
 .formacao {
   background: #526D82;
   padding: 3rem;
 }
+@media (max-width: 767px) {
+  .formacao {
+    padding: 3rem 1rem;
+  }
+}
 .formacao h2 {
   font-size: 3rem;
   padding-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .formacao h2 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
 }
 .formacao .formacao__conteiner {
   display: grid;
@@ -540,6 +624,15 @@
   width: 50%;
   height: 100%;
   gap: 25px;
+}
+@media (max-width: 767px) {
+  .formacao .formacao__conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    width: 80%;
+  }
 }
 .formacao .formacao__conteiner .formacao__universidade {
   grid-column: span 2;
@@ -570,6 +663,22 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+@media (max-width: 767px) {
+  .formacao {
+    padding: 3rem 1rem;
+  }
+  .formacao h2 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .formacao .formacao__conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    width: 80%;
+  }
+}
 .projetos {
   background: #526D82;
   padding: 3em;
@@ -683,4 +792,29 @@
 }
 .projetos .projetos_items--calmaria .projetos_items_descricao .projetos_items_descricao--links div:nth-child(2) {
   margin-left: 0.5em;
+}
+
+@media (max-width: 767px) {
+  .projetos .projetos_titulo {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .projetos .projetos_items {
+    flex-direction: column;
+  }
+  .projetos .projetos_items .projetos_items__list img {
+    display: none;
+  }
+  .projetos .projetos_items .projetos_items_descricao {
+    margin: 0;
+  }
+  .projetos .projetos_items--calmaria {
+    flex-direction: column;
+  }
+  .projetos .projetos_items--calmaria .projetos_items__list img {
+    display: none;
+  }
+  .projetos .projetos_items--calmaria .projetos_items_descricao {
+    margin: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
