@@ -1,5 +1,6 @@
 @use './variaveis';
 @use './linguagens';
+@use './breakpointsMedia';
 
 .apresentacao{
     background:variaveis.$color-backgroud;
@@ -7,6 +8,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 2.1rem;
+
+    @include breakpointsMedia.breakpoint(small){
+        justify-content: center;
+        flex-direction: column-reverse;
+        padding: .5rem 2.1rem;
+    }
 }
 
 .sobreMim{
@@ -17,22 +24,31 @@
     justify-content: space-around;
     text-align: center;
     padding: 3rem;
+    @include breakpointsMedia.breakpoint(small){
+        justify-content: center;
+        flex-direction: column;
+    }
     
 }
 
-.apresentacao__titulo, .sobreMim__text{
-    width: 50%;
-}
 
 .apresentacao__titulo h2, .sobreMim__text__titulo{
     font-size: 3rem;
     padding-bottom: 2rem;
+    @include breakpointsMedia.breakpoint(small){
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
 .apresentacao__titulo p, .sobreMim__text__conteudo{
     font-size: 1.1rem;
     font-weight: 300;
     padding-bottom: 1rem ;
+    @include breakpointsMedia.breakpoint(small){
+        font-size: 1rem;
+        text-align: center;
+    }
 }
 
 .apresentacao__titulo button, .sobreMim__text__button{
@@ -42,6 +58,11 @@
     color: variaveis.$color-font-buttons;
     background: variaveis.$color-buttons;
     cursor: pointer;
+
+    @include breakpointsMedia.breakpoint(small){
+        padding: .8rem;
+        font-size: .8rem;
+    }
 }
 
 .apresentacao__titulo button:hover, .sobreMim__text__button:hover{
@@ -57,11 +78,19 @@
 
 .apresentacao__imagem, .sobreMim__imagem{
     width: 30%;
+    @include breakpointsMedia.breakpoint(small){
+        width: 60%;
+    }
 }
 
 .sobreMim__imagem img{
     display: block;
     animation: moverParaLado 4s infinite;
+
+    @include breakpointsMedia.breakpoint(small){
+        animation: none;
+        display: none;
+    }
 }
 
 .apresentacao__imagem img{
@@ -69,6 +98,11 @@
     width: 100%;
     height: 100%;
     animation: moverParaCima 4s infinite;
+
+    @include breakpointsMedia.breakpoint(small){
+        animation: none;
+        margin-bottom: 1.8rem;
+    }
 }
 
 @keyframes moverParaCima {
@@ -88,4 +122,6 @@
         transform: translateX(100px);
     }
 }
+
+
 
