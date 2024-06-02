@@ -187,3 +187,43 @@
 
     }
 }
+
+@include breakpointsMedia.breakpoint("medium"){
+
+    .projetos {
+        .projetos_titulo {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .projetos_items{
+            flex-direction: column;
+            .projetos_items__list {
+                & img {
+                    display: block;
+                    width: 100%;
+                    padding: 1.5rem 0rem;
+                }
+            }
+            
+            .projetos_items_descricao{
+                margin: 0;
+            }
+        }
+
+        .projetos_items--calmaria {
+            flex-direction: column;
+            .projetos_items__list {
+                & img {
+                    display: block;
+                    width: 100%;
+                    padding: 0 0 1.5rem 0;
+                }
+            }
+    
+            .projetos_items_descricao {
+                margin: 0;
+            }
+        }
+    }
+}

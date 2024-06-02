@@ -1,14 +1,14 @@
 @charset "UTF-8";
-body {
-  overflow-x: hidden;
-}
-
 .cabeçalho {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   background: #526D82;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  height: 10vh;
 }
 .cabeçalho .mobile-menu {
   cursor: pointer;
@@ -119,6 +119,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
   .links {
     position: fixed;
     top: 60px;
@@ -132,6 +135,7 @@ body {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     overflow-x: hidden;
+    z-index: 1;
   }
   .links li {
     margin: 1rem 0;
@@ -813,6 +817,34 @@ body {
   }
   .projetos .projetos_items--calmaria .projetos_items__list img {
     display: none;
+  }
+  .projetos .projetos_items--calmaria .projetos_items_descricao {
+    margin: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .projetos .projetos_titulo {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .projetos .projetos_items {
+    flex-direction: column;
+  }
+  .projetos .projetos_items .projetos_items__list img {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 0rem;
+  }
+  .projetos .projetos_items .projetos_items_descricao {
+    margin: 0;
+  }
+  .projetos .projetos_items--calmaria {
+    flex-direction: column;
+  }
+  .projetos .projetos_items--calmaria .projetos_items__list img {
+    display: block;
+    width: 100%;
+    padding: 0 0 1.5rem 0;
   }
   .projetos .projetos_items--calmaria .projetos_items_descricao {
     margin: 0;
