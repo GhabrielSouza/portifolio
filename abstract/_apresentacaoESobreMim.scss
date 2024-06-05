@@ -2,15 +2,15 @@
 @use './linguagens';
 @use './breakpointsMedia';
 
-.apresentacao{
-    background:variaveis.$color-backgroud;
+.apresentacao {
+    background: variaveis.$color-backgroud;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80vh;
     padding: 2.1rem;
 
-    @include breakpointsMedia.breakpoint(small){
+    @include breakpointsMedia.breakpoint(small) {
         justify-content: center;
         flex-direction: column-reverse;
         text-align: center;
@@ -18,7 +18,7 @@
         height: auto !important;
     }
 
-    @include breakpointsMedia.breakpoint(medium){
+    @include breakpointsMedia.breakpoint(medium) {
         justify-content: center;
         flex-direction: column-reverse;
         padding: .5rem 2.1rem;
@@ -27,55 +27,58 @@
     }
 }
 
-.sobreMim{
-    background:variaveis.$color-backgroud;
+.sobreMim {
+    background: variaveis.$color-backgroud;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-around;
     text-align: center;
     padding: 3rem;
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         justify-content: center;
         flex-direction: column;
     }
-    
+
 }
 
-.apresentacao_coluna p{
+.apresentacao_coluna p {
     font-size: 1.5rem;
     font-weight: 300;
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         display: none;
     }
 
-    @include breakpointsMedia.breakpoint(medium){
+    @include breakpointsMedia.breakpoint(medium) {
         display: none;
     }
 }
 
-.apresentacao__titulo{
+.apresentacao__titulo {
     display: none;
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         display: block;
     }
-    
-    @include breakpointsMedia.breakpoint(medium){
+
+    @include breakpointsMedia.breakpoint(medium) {
         display: block;
     }
 }
 
-.apresentacao__titulo h2{
+.apresentacao__titulo h2 {
     font-size: 3rem;
     padding-bottom: 2rem;
-   
-    
-    @include breakpointsMedia.breakpoint(small){
+
+
+    @include breakpointsMedia.breakpoint(small) {
         font-size: 1.5rem !important;
         padding: 2rem 0;
     }
 
-    @include breakpointsMedia.breakpoint(medium){
+    @include breakpointsMedia.breakpoint(medium) {
         font-size: 3rem;
         padding: 2rem 0;
     }
@@ -84,11 +87,12 @@
 .apresentacao__titulo_animado {
     display: inline-flex;
     padding-bottom: 1rem;
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         display: none;
     }
 
-    @include breakpointsMedia.breakpoint(medium){
+    @include breakpointsMedia.breakpoint(medium) {
         display: none;
     }
 }
@@ -100,8 +104,8 @@
 }
 
 .apresentacao__titulo_animado .dinamico {
-    margin-left: 15px;  
-    height: 3rem; 
+    margin-left: 15px;
+    height: 3rem;
 }
 
 
@@ -125,7 +129,7 @@
     left: 0;
     border-left: 2px solid variaveis.$color-fonts;
     background: variaveis.$color-backgroud;
-    animation: typing 2.5s steps(20) forwards; 
+    animation: typing 2.5s steps(20) forwards;
 }
 
 @keyframes typing {
@@ -137,99 +141,106 @@
 }
 
 
-.sobreMim__text__titulo{
+.sobreMim__text__titulo {
     font-size: 3rem;
     padding-bottom: 2rem;
-    
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         font-size: 1.5rem;
         text-align: center;
     }
 }
 
-.apresentacao__titulo p, .sobreMim__text__conteudo{
+.apresentacao__titulo p,
+.sobreMim__text__conteudo {
     font-size: 1.5rem;
     font-weight: 300;
-    padding-bottom: 1rem ;
- 
-    @include breakpointsMedia.breakpoint(small){
+    padding-bottom: 2rem;
+
+    @include breakpointsMedia.breakpoint(small) {
         font-size: 1rem;
         text-align: center;
     }
 }
 
-.apresentacao__titulo button, .sobreMim__text__button{
+.sobreMim__text__link {
     padding: 1rem;
-    border-radius: 20px;    
+    border-radius: 20px;
     border: none;
     color: variaveis.$color-font-buttons;
     background: variaveis.$color-buttons;
     cursor: pointer;
 
-    @include breakpointsMedia.breakpoint(small){
+    @include breakpointsMedia.breakpoint(small) {
         padding: .8rem;
         font-size: .8rem;
     }
 }
 
-.apresentacao__titulo button:hover, .sobreMim__text__button:hover{
+.sobreMim__text__link {
+    text-decoration: none;
+}
+
+.sobreMim__text__link:hover {
     background: variaveis.$color-buttons-hover;
     transition: .5s all;
 }
 
-.apresentacao__titulo button:active, .sobreMim__text__button:active{
+.sobreMim__text__link:active {
     background: variaveis.$color-buttons;
     transition: none;
 }
 
-.apresentacao__imagem, .sobreMim__imagem{
+.apresentacao__imagem,
+.sobreMim__imagem {
     width: 20%;
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         width: 20%;
     }
 
-    @include breakpointsMedia.breakpoint(medium){
+    @include breakpointsMedia.breakpoint(medium) {
         width: 50%;
     }
 }
 
-.sobreMim__imagem{
-    @include breakpointsMedia.breakpoint(medium){
+.sobreMim__imagem {
+    @include breakpointsMedia.breakpoint(medium) {
         width: 30%;
     }
 }
 
-.sobreMim__imagem img{
+.sobreMim__imagem img {
     display: block;
     animation: moverParaLado 4s infinite;
 
-    @include breakpointsMedia.breakpoint(small){
+    @include breakpointsMedia.breakpoint(small) {
         animation: none;
         display: none;
     }
 }
 
-.apresentacao__imagem img{
+.apresentacao__imagem img {
     display: block;
     width: 100%;
     height: 100%;
-    
 
-    @include breakpointsMedia.breakpoint(small){
+
+    @include breakpointsMedia.breakpoint(small) {
         animation: none;
         margin-bottom: 1.8rem;
     }
 }
 
 
-@keyframes moverParaLado{
-    0%, 100%{
+@keyframes moverParaLado {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    50%{
+
+    50% {
         transform: translateX(100px);
     }
 }
-
-
-
