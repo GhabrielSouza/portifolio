@@ -120,6 +120,9 @@
   body {
     overflow-x: hidden;
   }
+  .cabeçalho {
+    justify-content: space-between;
+  }
   .links {
     position: fixed;
     top: 60px;
@@ -878,7 +881,7 @@ body {
     flex-direction: column;
   }
   .projetos .projetos_items .projetos_items__list img {
-    display: none;
+    display: none !important;
   }
   .projetos .projetos_items .projetos_items_descricao {
     margin: 0;
@@ -887,7 +890,7 @@ body {
     flex-direction: column;
   }
   .projetos .projetos_items--calmaria .projetos_items__list img {
-    display: none;
+    display: none !important;
   }
   .projetos .projetos_items--calmaria .projetos_items_descricao {
     margin: 0;

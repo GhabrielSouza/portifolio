@@ -163,7 +163,7 @@
             flex-direction: column;
             .projetos_items__list {
                 & img {
-                    display: none;
+                    display: none !important;
                 }
             }
             
@@ -176,7 +176,7 @@
             flex-direction: column;
             .projetos_items__list {
                 & img {
-                    display: none;
+                    display: none !important;
                 }
             }
     
@@ -188,7 +188,7 @@
     }
 }
 
-@include breakpointsMedia.breakpoint("medium"){
+@include breakpointsMedia.breakpoint(medium){
 
     .projetos {
         .projetos_titulo {

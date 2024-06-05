@@ -141,6 +141,10 @@ $color-font: #fff;
         overflow-x: hidden;
     }
 
+    .cabeçalho{
+        justify-content: space-between;
+    }
+
     .links {
         position: fixed;
         top: 60px;
