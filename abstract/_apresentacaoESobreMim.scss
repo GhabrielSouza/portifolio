@@ -7,12 +7,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    height: 70vh;
     padding: 2.1rem;
 
     @include breakpointsMedia.breakpoint(small){
         justify-content: center;
         flex-direction: column-reverse;
         padding: .5rem 2.1rem;
+        height: auto;
     }
 }
 
@@ -31,10 +34,88 @@
     
 }
 
+.apresentacao_coluna p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    @include breakpointsMedia.breakpoint(small){
+        display: none;
+    }
+}
 
-.apresentacao__titulo h2, .sobreMim__text__titulo{
+.apresentacao__titulo{
+    display: none;
+    @include breakpointsMedia.breakpoint(small){
+        display: block;
+    }
+}
+
+.apresentacao__titulo h2{
     font-size: 3rem;
     padding-bottom: 2rem;
+   
+    
+    @include breakpointsMedia.breakpoint(small){
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.apresentacao__titulo_animado {
+    display: inline-flex;
+    padding-bottom: 1rem;
+    @include breakpointsMedia.breakpoint(small){
+        display: none;
+    }
+}
+
+.apresentacao__titulo_animado .estatico {
+    color: variaveis.$color-fonts;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.apresentacao__titulo_animado .dinamico {
+    margin-left: 15px;  
+    height: 3rem; 
+}
+
+
+.dinamico li {
+    color: variaveis.$color-fonts;
+    list-style: none;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+
+.dinamico li span {
+    position: relative;
+}
+
+.dinamico li span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid variaveis.$color-fonts;
+    background: variaveis.$color-backgroud;
+    animation: typing 2.5s steps(20) forwards; 
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+        display: none;
+    }
+}
+
+
+.sobreMim__text__titulo{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    
     @include breakpointsMedia.breakpoint(small){
         font-size: 1.5rem;
         text-align: center;
@@ -42,9 +123,10 @@
 }
 
 .apresentacao__titulo p, .sobreMim__text__conteudo{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 300;
     padding-bottom: 1rem ;
+ 
     @include breakpointsMedia.breakpoint(small){
         font-size: 1rem;
         text-align: center;
@@ -77,7 +159,7 @@
 }
 
 .apresentacao__imagem, .sobreMim__imagem{
-    width: 30%;
+    width: 20%;
     @include breakpointsMedia.breakpoint(small){
         width: 60%;
     }
@@ -97,7 +179,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    animation: moverParaCima 4s infinite;
+    
 
     @include breakpointsMedia.breakpoint(small){
         animation: none;
@@ -105,14 +187,6 @@
     }
 }
 
-@keyframes moverParaCima {
-    0%, 100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-50px);
-    }
-}
 
 @keyframes moverParaLado{
     0%, 100%{
