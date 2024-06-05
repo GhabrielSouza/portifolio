@@ -4,8 +4,19 @@
 $color-background: #27374D;
 $color-font: #fff;
 
+header.cabeçalho_stroll{
+    background: variaveis.$color-backgroud-nav;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+header.cabeçalho_stroll .links li a{
+    color: variaveis.$color-fonts;
+}
 
 .cabeçalho{
+    position: fixed;
+    top: 0;
+    left: 0;
     width:  100%;
     z-index: 1;
     background:variaveis.$color-backgroud;
@@ -13,7 +24,7 @@ $color-font: #fff;
     justify-content: space-around;
     align-items: center;
     padding: 0 1rem;
-    height: 10vh;
+    padding: 10px 2%;
     
     
     
@@ -51,8 +62,12 @@ $color-font: #fff;
         list-style: none;
 
         & li{
-            margin-right: 3rem;
+           
             align-items: center;
+        }
+
+        & li:nth-child(2){
+            margin: 0 2rem;
         }
 
         & li a{
@@ -147,7 +162,7 @@ $color-font: #fff;
 
     .links {
         position: fixed;
-        top: 60px;
+        top: 80px;
         right: 0;
         width: 50%;
         height: calc(100vh - 100px);
@@ -167,6 +182,12 @@ $color-font: #fff;
         &.active {
             transform: translateX(0);
         }
+    }
+}
+
+@include breakpointsMedia.breakpoint(medium){
+    .cabeçalho{
+        justify-content: space-between;
     }
 }
 

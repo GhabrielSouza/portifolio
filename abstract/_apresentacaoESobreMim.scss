@@ -7,15 +7,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    height: 70vh;
+    height: 80vh;
     padding: 2.1rem;
 
     @include breakpointsMedia.breakpoint(small){
         justify-content: center;
         flex-direction: column-reverse;
+        text-align: center;
+        padding: 6rem 2.1rem !important;
+        height: auto !important;
+    }
+
+    @include breakpointsMedia.breakpoint(medium){
+        justify-content: center;
+        flex-direction: column-reverse;
         padding: .5rem 2.1rem;
-        height: auto;
+        text-align: center;
+        height: 80vh;
     }
 }
 
@@ -40,11 +48,19 @@
     @include breakpointsMedia.breakpoint(small){
         display: none;
     }
+
+    @include breakpointsMedia.breakpoint(medium){
+        display: none;
+    }
 }
 
 .apresentacao__titulo{
     display: none;
     @include breakpointsMedia.breakpoint(small){
+        display: block;
+    }
+    
+    @include breakpointsMedia.breakpoint(medium){
         display: block;
     }
 }
@@ -55,8 +71,13 @@
    
     
     @include breakpointsMedia.breakpoint(small){
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.5rem !important;
+        padding: 2rem 0;
+    }
+
+    @include breakpointsMedia.breakpoint(medium){
+        font-size: 3rem;
+        padding: 2rem 0;
     }
 }
 
@@ -64,6 +85,10 @@
     display: inline-flex;
     padding-bottom: 1rem;
     @include breakpointsMedia.breakpoint(small){
+        display: none;
+    }
+
+    @include breakpointsMedia.breakpoint(medium){
         display: none;
     }
 }
@@ -148,7 +173,6 @@
 }
 
 .apresentacao__titulo button:hover, .sobreMim__text__button:hover{
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     background: variaveis.$color-buttons-hover;
     transition: .5s all;
 }
@@ -161,7 +185,17 @@
 .apresentacao__imagem, .sobreMim__imagem{
     width: 20%;
     @include breakpointsMedia.breakpoint(small){
-        width: 60%;
+        width: 20%;
+    }
+
+    @include breakpointsMedia.breakpoint(medium){
+        width: 50%;
+    }
+}
+
+.sobreMim__imagem{
+    @include breakpointsMedia.breakpoint(medium){
+        width: 30%;
     }
 }
 
