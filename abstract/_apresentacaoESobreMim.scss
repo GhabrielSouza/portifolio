@@ -140,6 +140,17 @@
     }
 }
 
+.sobreMim__text{
+    width: 50%;
+
+    @include breakpointsMedia.breakpoint(small) {
+        width: 100%;
+    }
+
+    @include breakpointsMedia.breakpoint(medium) {
+        width: 100%;
+    }
+}
 
 .sobreMim__text__titulo {
     font-size: 3rem;
@@ -149,10 +160,10 @@
         font-size: 1.5rem;
         text-align: center;
     }
+    
 }
 
-.apresentacao__titulo p,
-.sobreMim__text__conteudo {
+.apresentacao__titulo p{
     font-size: 1.5rem;
     font-weight: 300;
     padding-bottom: 2rem;
@@ -163,12 +174,25 @@
     }
 }
 
+.sobreMim__text__conteudo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: justify;
+    padding-bottom: 2rem;
+
+    @include breakpointsMedia.breakpoint(small) {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+}
+
 .sobreMim__text__link {
     padding: 1rem;
     border-radius: 20px;
     border: none;
     color: variaveis.$color-font-buttons;
     background: variaveis.$color-buttons;
+    text-decoration: none;
     cursor: pointer;
 
     @include breakpointsMedia.breakpoint(small) {
@@ -177,9 +201,6 @@
     }
 }
 
-.sobreMim__text__link {
-    text-decoration: none;
-}
 
 .sobreMim__text__link:hover {
     background: variaveis.$color-buttons-hover;
@@ -206,7 +227,7 @@
 
 .sobreMim__imagem {
     @include breakpointsMedia.breakpoint(medium) {
-        width: 30%;
+        display: none;
     }
 }
 
