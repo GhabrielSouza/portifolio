@@ -915,6 +915,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-direction: row-reverse;
+  margin-bottom: 5em;
 }
 .projetos .projetos_items--calmaria .projetos_items__list {
   width: 80%;

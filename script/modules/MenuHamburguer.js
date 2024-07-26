@@ -9,3 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mobileMenu.addEventListener("click", toggleMenu);
 });
+
+export * as menu from "./MenuHamburguer.js";
